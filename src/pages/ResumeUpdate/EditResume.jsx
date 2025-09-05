@@ -509,7 +509,7 @@ const EditResume = () => {
       navigate("/dashboard");
     } catch (error) {
       console.error("Error uploading images:", error);
-      toast.error("Failed to upload images");
+      toast.error("Failed to upload images changes. Please try again.");
     } finally {
       setIsLoading(false);
     }
