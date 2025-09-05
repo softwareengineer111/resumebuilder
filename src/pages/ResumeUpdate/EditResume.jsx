@@ -503,7 +503,7 @@ const EditResume = () => {
       console.log("RESUME_DATA___", resumeData);
 
       // Call the second API to update other resume data
-      await updateResumeDetails(thumbnailLink, profilePreviewUrl);
+      //await updateResumeDetails(thumbnailLink, profilePreviewUrl);
 
       toast.success("Resume Updated Successfully!");
       navigate("/dashboard");
