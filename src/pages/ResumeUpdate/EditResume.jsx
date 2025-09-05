@@ -477,20 +477,20 @@ const EditResume = () => {
     try {
       setIsLoading(true);
 
-      fixTailwindColors(resumeRef.current);
-      const imageDataUrl = await captureElementAsImage(resumeRef.current);
+      // fixTailwindColors(resumeRef.current);
+      // const imageDataUrl = await captureElementAsImage(resumeRef.current);
 
-      // Convert base64 to File
-      const thumbnailFile = dataURLtoFile(
-        imageDataUrl,
-        `resume-${resumeId}.png`
-      );
+      // // Convert base64 to File
+      // const thumbnailFile = dataURLtoFile(
+      //   imageDataUrl,
+      //   `resume-${resumeId}.png`
+      // );
 
-      const profileImageFile = resumeData?.profileInfo?.profileImg || null;
+      // const profileImageFile = resumeData?.profileInfo?.profileImg || null;
 
-      const formData = new FormData();
-      if (profileImageFile) formData.append("profileImage", profileImageFile);
-      if (thumbnailFile) formData.append("thumbnail", thumbnailFile);
+      // const formData = new FormData();
+      // if (profileImageFile) formData.append("profileImage", profileImageFile);
+      // if (thumbnailFile) formData.append("thumbnail", thumbnailFile);
 
       // const uploadResponse = await axiosInstance.put(
       //   API_PATHS.RESUME.UPLOAD_IMAGES(resumeId),
@@ -500,10 +500,10 @@ const EditResume = () => {
 
       const { thumbnailLink, profilePreviewUrl } = "https://cdn-icons-png.flaticon.com/512/3135/3135715.png";
 
-      console.log("RESUME_DATA___", resumeData);
+      //console.log("RESUME_DATA___", resumeData);
 
       // Call the second API to update other resume data
-      //await updateResumeDetails(thumbnailLink, profilePreviewUrl);
+      await updateResumeDetails(thumbnailLink, profilePreviewUrl);
 
       toast.success("Resume Updated Successfully!");
       navigate("/dashboard");
