@@ -498,12 +498,12 @@ const EditResume = () => {
       //   { headers: { "Content-Type": "multipart/form-data" } }
       // );
 
-      const { thumbnailLink, profilePreviewUrl } = "https://cdn-icons-png.flaticon.com/512/3135/3135715.png";
+      //const { thumbnailLink, profilePreviewUrl } = "https://cdn-icons-png.flaticon.com/512/3135/3135715.png";
 
       //console.log("RESUME_DATA___", resumeData);
 
       // Call the second API to update other resume data
-      await updateResumeDetails(thumbnailLink, profilePreviewUrl);
+      //await updateResumeDetails(thumbnailLink, profilePreviewUrl);
 
       toast.success("Resume Updated Successfully!");
       navigate("/dashboard");
